@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex → Automata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="grid-bg"></div> <!-- this is for the background grid -->
+
+    <header>
+        <div class="logo">∑ AutomataLab</div>
+        <div class="tagline">Regex → NFA / DFA visualiser</div>
+    </header>
+
+    <main>
+        <!-- Input Panel -->
+        <section class="panel input-panel">
+            <label class="field-label">Regular Expression</label>
+            <div class="input-row">
+                <input id="regexInput" type="text" placeholder="e.g.  (a|b)*abb" autocomplete="off"
+                    spellcheck="false" />
+                <button id="generateBtn">Generate</button>
+            </div>
+
+            <div class="mode-row">
+                <span class="field-label">Automaton type</span>
+                <div class="toggle-group">
+                    <button class="toggle active" data-mode="nfa">NFA</button>
+                    <button class="toggle" data-mode="dfa">DFA</button>
+                </div>
+            </div>
+
+            <div id="errorBox" class="error-box hidden"></div>
+        </section>
+
+        <!-- Output Panel -->
+        <section class="panel output-panel">
+            <div id="loader" class="loader hidden">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div id="result" class="hidden">
+                <div class="result-meta">
+                    <span id="metaRegex"></span>
+                    <span id="metaMode" class="badge"></span>
+                </div>
+
+                <!-- Diagram -->
+                <div class="diagram-wrap">
+                    <svg id="diagram" xmlns="http://www.w3.org/2000/svg"></svg>
+                </div>
+
+                <!-- Transition Table -->
+                <div class="table-wrap">
+                    <h3>Transition Table</h3>
+                    <div id="tableContainer"></div>
+                </div>
+
+                <!-- Raw JSON -->
+                <details class="raw-toggle">
+                    <summary>Raw JSON</summary>
+                    <pre id="rawJson"></pre>
+                </details>
+            </div>
+
+            <div id="placeholder" class="placeholder">
+                <div class="placeholder-icon">◎</div>
+                <p>Enter a regex above and click <strong>Generate</strong></p>
+            </div>
+        </section>
+
+        <!-- History -->
+        <section class="panel history-panel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button id="clearBtn" class="clear-btn">Clear</button>
+            </div>
+            <ul id="historyList"></ul>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
