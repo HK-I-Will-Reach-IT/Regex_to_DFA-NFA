@@ -4,7 +4,7 @@ Converts a postfix token list into a raw NFA fragment.
 Nothing in this file knows about NFA simplification or DFA construction.
 """
 
-from services.regex_parser import to_postfix
+from backend.services.regex_parser import to_postfix
 
 _state_counter = 0
 
