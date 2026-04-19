@@ -1,6 +1,10 @@
 [project]
 name = "regex-to-dfa-nfa"
 version = "0.1.0"
+dependencies = [
+  "Flask",
+  "Flask-Cors"
+]
 
 [project.scripts]
 app = "backend.app:app"
