@@ -9,7 +9,7 @@ the `a*` loop state from being incorrectly deleted.
 """
 
 from collections import deque
-from backend.services.thompson_nfa import build_fragment, serialize_fragment
+from .thompson_nfa import build_fragment, serialize_fragment
 
 
 # ── Reachability pruning ──────────────────────────────────────

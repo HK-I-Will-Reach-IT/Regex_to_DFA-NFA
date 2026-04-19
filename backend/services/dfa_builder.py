@@ -6,7 +6,7 @@ Imports from thompson.py only. Knows nothing about NFA simplification.
 """
 
 from collections import deque
-from backend.services.thompson_dfa import build_fragment, serialize_fragment
+from .thompson_dfa import build_fragment, serialize_fragment
 
 
 # ── ε-closure & move ─────────────────────────────────────────

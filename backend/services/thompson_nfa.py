@@ -3,7 +3,7 @@ Thompson's construction core for NFA pipeline.
 Converts a postfix token list into a raw NFA fragment.
 """
 
-from backend.services.regex_parser import to_postfix
+from .regex_parser import to_postfix
 
 _state_counter = 0
 

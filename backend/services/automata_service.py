@@ -1,7 +1,7 @@
-from backend.services.nfa_builder import build_nfa
-from backend.services.dfa_builder import build_dfa
-from backend.models.automata_model import AutomataResult
-from backend.models.store import Store
+from .nfa_builder import build_nfa
+from .dfa_builder import build_dfa
+from ..models.automata_model import AutomataResult
+from ..models.store import Store
 
 
 class AutomataService:

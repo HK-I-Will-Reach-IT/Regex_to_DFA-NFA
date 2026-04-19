@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from backend.controllers.automata_controller import automata_bp
+from .controllers.automata_controller import automata_bp
 
 app = Flask(__name__)
 CORS(app)

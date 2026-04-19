@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from backend.services.automata_service import AutomataService
+from ..services.automata_service import AutomataService
 
 automata_bp = Blueprint("automata", __name__)
 _service = AutomataService()
