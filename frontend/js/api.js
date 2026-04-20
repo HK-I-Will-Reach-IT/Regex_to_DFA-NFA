@@ -1,6 +1,6 @@
 // api.js — all HTTP calls to the Flask backend
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "/api"; // Use "http://localhost:5000/api" on local
 
 const Api = {
     async generate(regex, mode) {
